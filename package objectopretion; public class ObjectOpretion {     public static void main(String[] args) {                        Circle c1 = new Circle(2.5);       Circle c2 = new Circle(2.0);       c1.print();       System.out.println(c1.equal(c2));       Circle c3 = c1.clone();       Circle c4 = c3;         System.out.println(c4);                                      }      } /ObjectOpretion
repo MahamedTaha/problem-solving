@@ -1,0 +1,59 @@
+
+package objectopretion;
+public class ObjectOpretion {
+    public static void main(String[] args) {
+       
+        
+      Circle c1 = new Circle(2.5);
+      Circle c2 = new Circle(2.0);
+      c1.print();
+      System.out.println(c1.equal(c2));
+      Circle c3 = c1.clone();
+      Circle c4 = c3;
+        System.out.println(c4);
+      
+       
+        
+        
+    }
+    
+}
+// class
+
+package objectopretion;
+
+
+public class Circle {
+   double redius;
+   
+   public Circle(double redius){
+    this.redius = redius;
+       System.out.println(redius);
+   }
+   
+   public double area (){
+       
+   return Math.PI * redius * redius;
+   }
+   public double pram (){
+   return 2 * Math.PI * redius ;
+   }
+   
+   public boolean equal (Circle c){
+   if (this.redius == c.redius) return true;  
+   else return false;
+   } 
+   public Circle clone(){
+     Circle c = new Circle(this.redius);
+     return c;
+   }
+   
+   public void print (){
+   
+       System.out.println(this.area());
+       System.out.println(this.pram());
+   
+   }
+    
+    
+}
